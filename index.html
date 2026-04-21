@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Optic Player - Emby Client</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Boxicons for scalable vector icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Core styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background element for ambient glow -->
+    <div class="ambient-background"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <!-- 💡 Replace the src link below with your actual logo file -->
+                <img src="assets/logo.webp" alt="Optic Player Logo" class="logo-img">
+                <span class="logo-text">Optic Player</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" data-i18n="nav_home">Home</a>
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#community" data-i18n="nav_community">Community</a>
+            </div>
+            <div class="nav-controls">
+                <button id="langToggle" class="lang-btn" aria-label="Toggle Language">
+                    <i class='bx bx-globe'></i> <span id="currentLang">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="tech-badge" data-i18n="version_badge">Optic Player 0.1.0</div>
+                <h1 class="gradient-text" data-i18n="hero_title">The Cross-Platform Emby Client</h1>
+                <p data-i18n="hero_subtitle">Experience your media like never before with our elegant, Apple TV inspired
+                    interface. Built for performance, designed for beauty.</p>
+                <div class="hero-actions">
+                    <a href="https://github.com/lzxggzh/optic-player.github.io/releases/latest" target="_blank"
+                        class="btn btn-primary glow-btn"><span data-i18n="btn_download_now">Download Now</span><i
+                            class='bx bxl-github'></i></a>
+                    <a href="#community" class="btn btn-secondary" data-i18n="btn_join_community">Join Community</a>
+                </div>
+            </div>
+
+            <div class="hero-showcase">
+                <div class="showcase-glow"></div>
+                <div class="showcase-window">
+                    <div class="showcase-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <div class="showcase-title">Optic Player</div>
+                    </div>
+                    <img src="assets/screenshot.webp" alt="App Interface" class="showcase-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Platforms Section -->
+        <section id="features" class="section">
+            <h2 class="section-title" data-i18n="platforms_title">Available Everywhere</h2>
+            <p class="section-subtitle" data-i18n="platforms_subtitle">Seamless continuous playback across all your
+                favorite devices.</p>
+
+            <div class="platforms-grid">
+                <!-- Windows Series -->
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-windows'></i>
+                    <h3 data-translate="no">Windows</h3>
+                    <p class="req" data-i18n="req_windows">Windows 10/11</p>
+                    <p class="arch" data-i18n="arch_windows">x64</p>
+                </div>
+
+                <!-- Android Series -->
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-android'></i>
+                    <h3 data-translate="no">Android</h3>
+                    <p class="req" data-i18n="req_android">Android 7.0+</p>
+                    <p class="arch" data-i18n="arch_android">arm64-v8a</p>
+                </div>
+                <div class="platform-card glass-card">
+                    <i class='bx bx-tv'></i>
+                    <h3 data-translate="no">Android TV</h3>
+                    <p class="req" data-i18n="req_android">Android 7.0+</p>
+                    <p class="arch" data-i18n="arch_androidtv">arm64-v8a</p>
+                </div>
+
+                <!-- Apple Series -->
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-apple'></i>
+                    <h3 data-translate="no">macOS</h3>
+                    <p class="req" data-i18n="coming_soon" style="color: var(--accent-primary); opacity: 0.8;">Coming
+                        Soon</p>
+                </div>
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-apple'></i>
+                    <h3 data-translate="no">iOS</h3>
+                    <p class="req" data-i18n="coming_soon" style="color: var(--accent-primary); opacity: 0.8;">Coming
+                        Soon</p>
+                </div>
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-apple'></i>
+                    <h3 data-translate="no">Apple TV</h3>
+                    <p class="req" data-i18n="coming_soon" style="color: var(--accent-primary); opacity: 0.8;">Coming
+                        Soon</p>
+                </div>
+
+                <!-- Linux Series -->
+                <div class="platform-card glass-card">
+                    <i class='bx bxl-tux'></i>
+                    <h3 data-translate="no">Linux</h3>
+                    <p class="req" data-i18n="coming_soon" style="color: var(--accent-primary); opacity: 0.8;">Coming
+                        Soon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="section">
+            <div class="privacy-card glass-card">
+                <div class="privacy-icon"><i class='bx bx-shield-quarter'></i></div>
+                <h2 data-i18n="privacy_title">Your Privacy Matters</h2>
+                <p data-i18n="privacy_desc">Optic Player respects your privacy. Our software does not collect, track, or
+                    share any of your personal information or viewing habits. Everything stays between your client and
+                    your Emby server.</p>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="section">
+            <h2 class="section-title" data-i18n="community_title">Join the Community</h2>
+            <p class="section-subtitle" data-i18n="community_subtitle">Optic Player development is driven by our users.
+                Report bugs, suggest features, and connect with other users.</p>
+
+            <div class="community-grid">
+                <a href="https://t.me/+T4UZn2IItoJjY2U0" target="_blank" class="community-card glass-card telegram">
+                    <i class='bx bxl-telegram'></i>
+                    <h3 data-i18n="telegram_group">Telegram Group</h3>
+                    <p data-i18n="telegram_desc">Join our official channel for lively discussions.</p>
+                </a>
+                <a href="https://github.com/lzxggzh/optic-player.github.io/issues" target="_blank"
+                    class="community-card glass-card github">
+                    <i class='bx bxl-github'></i>
+                    <h3 data-i18n="github_issues">GitHub Issues</h3>
+                    <p data-i18n="github_desc">Report bugs and submit feature requests.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Optic Player. All rights reserved.</p>
+    </footer>
+
+    <!-- Logic scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
