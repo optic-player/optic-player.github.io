@@ -31,7 +31,7 @@
             <div class="nav-links">
                 <a href="#home" data-i18n="nav_home">Home</a>
                 <a href="#features" data-i18n="nav_features">Features</a>
-                <a href="#community" data-i18n="nav_community">Community</a>
+                <a href="#support" data-i18n="nav_support">Support</a>
             </div>
             <div class="nav-controls">
                 <button id="langToggle" class="lang-btn" aria-label="Toggle Language">
@@ -53,7 +53,7 @@
                     <a href="https://github.com/optic-player/optic-player.github.io/releases/latest" target="_blank"
                         class="btn btn-primary glow-btn"><span data-i18n="btn_download_now">Download Now</span><i
                             class='bx bxl-github'></i></a>
-                    <a href="#community" class="btn btn-secondary" data-i18n="btn_join_community">Join Community</a>
+                    <a href="#support" class="btn btn-secondary" data-i18n="btn_feedback">Feedback</a>
                 </div>
             </div>
 
@@ -130,33 +130,25 @@
             </div>
         </section>
 
-        <!-- Privacy Section -->
-        <section id="privacy" class="section">
-            <div class="privacy-card glass-card">
-                <div class="privacy-icon"><i class='bx bx-shield-quarter'></i></div>
-                <h2 data-i18n="privacy_title">Your Privacy Matters</h2>
-                <p data-i18n="privacy_desc">Optic Player respects your privacy. Our software does not collect, track, or
-                    share any of your personal information or viewing habits. Everything stays between your client and
-                    your Emby server.</p>
-            </div>
-        </section>
+        <!-- Bottom Info Section -->
+        <section id="support" class="section">
+            <div class="bottom-cards-grid">
+                <!-- Privacy Card -->
+                <div class="privacy-card glass-card">
+                    <div class="privacy-icon"><i class='bx bx-shield-quarter'></i></div>
+                    <h2 data-i18n="privacy_title">Your Privacy Matters</h2>
+                    <p data-i18n="privacy_desc">Optic Player respects your privacy. Our software does not collect,
+                        track, or
+                        share any of your personal information or viewing habits. Everything stays between your client
+                        and
+                        your Emby server.</p>
+                </div>
 
-        <!-- Community Section -->
-        <section id="community" class="section">
-            <h2 class="section-title" data-i18n="community_title">Join the Community</h2>
-            <p class="section-subtitle" data-i18n="community_subtitle">Optic Player development is driven by our users.
-                Report bugs, suggest features, and connect with other users.</p>
-
-            <div class="community-grid">
-                <a href="https://t.me/+T4UZn2IItoJjY2U0" target="_blank" class="community-card glass-card telegram">
-                    <i class='bx bxl-telegram'></i>
-                    <h3 data-i18n="telegram_group">Telegram Group</h3>
-                    <p data-i18n="telegram_desc">Join our official channel for lively discussions.</p>
-                </a>
+                <!-- GitHub Support Card -->
                 <a href="https://github.com/optic-player/optic-player.github.io/issues" target="_blank"
-                    class="community-card glass-card github">
-                    <i class='bx bxl-github'></i>
-                    <h3 data-i18n="github_issues">GitHub Issues</h3>
+                    class="support-card glass-card">
+                    <div class="support-icon"><i class='bx bxl-github'></i></div>
+                    <h2 data-i18n="github_issues">GitHub Issues</h2>
                     <p data-i18n="github_desc">Report bugs and submit feature requests.</p>
                 </a>
             </div>

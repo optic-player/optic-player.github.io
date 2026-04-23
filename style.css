@@ -543,73 +543,55 @@ a {
     color: var(--text-primary);
 }
 
-/* Privacy Feature Card */
-.privacy-card {
+/* Bottom Info Cards (Privacy & GitHub) */
+.bottom-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-card, .support-card {
     padding: 4rem 2rem;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-card {
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.support-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.privacy-icon i, .support-icon i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .privacy-icon i {
-    font-size: 4rem;
     color: #10B981;
-    margin-bottom: 1.5rem;
 }
 
-.privacy-card h2 {
-    margin-bottom: 1rem;
-}
-
-.privacy-card p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-}
-
-/* Community Section Links */
-.community-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.community-card {
-    padding: 3rem 2rem;
-    text-align: center;
-    display: block;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s;
-}
-
-.community-card:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.06);
-}
-
-.community-card i {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
-}
-
-.community-card.telegram:hover i {
-    color: #0088cc;
-}
-
-.community-card.github:hover i {
+.support-icon i {
     color: #ffffff;
 }
 
-.community-card h3 {
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
+.privacy-card h2, .support-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
 }
 
-.community-card p {
+.privacy-card p, .support-card p {
     color: var(--text-secondary);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 /* Footer Styling */
@@ -643,11 +625,8 @@ a {
     }
 
     .download-container,
-    .privacy-card {
-        padding: 1.5rem;
-    }
-
-    .community-card {
+    .privacy-card,
+    .support-card {
         padding: 2rem 1.5rem;
     }
 }
