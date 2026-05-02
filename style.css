@@ -543,6 +543,84 @@ a {
     color: var(--text-primary);
 }
 
+/* Release Notes Section */
+.release-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.release-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.release-version {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.release-version i {
+    color: var(--accent-primary);
+}
+
+.release-date {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-family: monospace;
+}
+
+.release-category {
+    margin-bottom: 2rem;
+}
+
+.release-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.category-title.new i { color: #10B981; }
+.category-title.fixed i { color: #3B82F6; }
+.category-title.improved i { color: #F59E0B; }
+
+.release-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.release-content li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.release-content li::before {
+    content: "•";
+    color: var(--accent-primary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
 /* Bottom Info Cards (Privacy & GitHub) */
 .bottom-cards-grid {
     display: grid;
@@ -626,7 +704,14 @@ a {
 
     .download-container,
     .privacy-card,
-    .support-card {
+    .support-card,
+    .release-container {
         padding: 2rem 1.5rem;
+    }
+    
+    .release-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
 }
