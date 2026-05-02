@@ -14,6 +14,4 @@ Android内建TV支持。一个APK支持手机、平板和电视
 
 ## Apple系
 
-GitHub的Action配额不小心消耗完了，下个月再编译。
-
-不签名、不上架App Store（搞不到美区号）
+不签名、不上架App Store（搞不到美区号）。使用方式自行Google或问AI。
