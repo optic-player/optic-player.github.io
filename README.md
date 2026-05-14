@@ -4,6 +4,18 @@
 
 本项目为自用，暂时只支持Emby。
 
+## 播放器内核
+
+所有平台上都集成了`MPV`。`Android`、`iOS`和`macOS`平台额外集成了原生播放器。
+
+- **Android/TV**: 默认为`ExoPlayer + FFmpeg Extension`，也可使用`MPV`。
+- **iOS/iPadOS**: 默认为`AVPlayer`，也可使用`MPV`。
+- **macOS**: 默认为`AVPlayer`，也可使用`MPV`。
+- **Windows**: `MPV`。
+- **Linux**: `MPV`。
+
+> Linux的包目前未编译，有空时会编译出来。
+
 ## Windows
 
 需安装VC运行库最新版：[去微软下载](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist)
