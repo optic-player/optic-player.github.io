@@ -460,6 +460,105 @@ a {
     letter-spacing: 0.2px;
 }
 
+/* Player Core Section */
+.core-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.core-card {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.core-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.core-icon {
+    font-size: 3rem;
+    display: flex;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.core-card:hover .core-icon {
+    color: var(--text-primary);
+}
+
+.core-icon.android-color { color: #3DDC84; }
+.core-icon.apple-color { color: #A2AAAD; }
+.core-icon.win-linux-color { color: #00A4EF; }
+
+.core-card:hover .core-icon.android-color { color: #5effa5; }
+.core-card:hover .core-icon.apple-color { color: #ffffff; }
+.core-card:hover .core-icon.win-linux-color { color: #33bbf5; }
+
+.core-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.engine-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.engine-tag.primary {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60A5FA;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.engine-tag.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+}
+
+.engine-tag i {
+    font-size: 1.1rem;
+}
+
+.core-note {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.core-note i {
+    font-size: 1.8rem;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.core-note p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.core-note strong {
+    color: var(--text-primary);
+}
+
 /* Download Section Custom Layout */
 .download-container {
     padding: 3rem;

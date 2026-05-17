@@ -8,6 +8,7 @@ const i18nDict = {
     en: {
         nav_home: "Home",
         nav_features: "Features",
+        nav_core: "Core",
         nav_changelog: "Changelog",
         nav_download: "Download",
         nav_support: "Support",
@@ -38,11 +39,17 @@ const i18nDict = {
         arch_android: "Universal",
         arch_windows: "x64",
         arch_macos: "Universal",
-        arch_linux: "x64"
+        arch_linux: "x64",
+        core_title: "Powerful Playback Engines",
+        core_subtitle: "Dual-engine architecture providing both MPV and highly optimized Native players for maximum decoding performance.",
+        core_default: "Default",
+        core_alt: "Alternative",
+        core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency."
     },
     zh: {
         nav_home: "首页",
         nav_features: "特性",
+        nav_core: "内核",
         nav_changelog: "更新日志",
         nav_download: "下载",
         nav_support: "支持",
@@ -73,7 +80,12 @@ const i18nDict = {
         arch_android: "Universal",
         arch_windows: "x64",
         arch_macos: "Universal",
-        arch_linux: "x64"
+        arch_linux: "x64",
+        core_title: "强大的播放内核",
+        core_subtitle: "全平台集成 MPV，并在移动端与桌面端提供高性能的原生播放器双引擎架构。",
+        core_default: "默认",
+        core_alt: "可选",
+        core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。"
     }
 };
 
