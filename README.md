@@ -26,7 +26,7 @@ Android内建TV支持。一个APK支持手机、平板和电视。
 
 ## Apple系
 
-不签名、不上架App Store（搞不到美区号）。使用方式自行Google或问AI。
+不签名、不上架App Store（搞不到美区开发者号）。使用方式自行Google或问AI。
 
 ## 备注
 
