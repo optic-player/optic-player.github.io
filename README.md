@@ -14,8 +14,6 @@
 - **Windows**: `MPV`。
 - **Linux**: `MPV`。
 
-> Linux的包目前未编译，有空时会编译出来。
-
 ## Windows
 
 需安装VC运行库最新版：[去微软下载](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) 。
@@ -27,6 +25,10 @@ Android内建TV支持。一个APK支持手机、平板和电视。
 ## Apple系
 
 不签名、不上架App Store（搞不到美区开发者号）。使用方式自行Google或问AI。
+
+## Linux
+
+查看[Linux使用文档](./docs/linux-install.md)
 
 ## 备注
 
