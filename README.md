@@ -35,3 +35,7 @@ Android内建TV支持。一个APK支持手机、平板和电视。
 ## 备注
 
 此播放器的User Agent为`OpticPlayer/<version>`。**对于白名单模式Emby服，如果没加白，请求会失败(403响应)，导致无法登录和播放**。
+
+## 截图
+
+![screenshot](./assets/screenshot.webp)
