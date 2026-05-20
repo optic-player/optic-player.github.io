@@ -24,7 +24,11 @@
 
 Android内建TV支持。一个APK支持手机、平板和电视。
 
-## Apple系
+## macOS
+
+Universal，支持Intel和Arm。
+
+## iOS / iPadOS / AppleTV
 
 不签名、不上架App Store（搞不到美区开发者号）。使用方式自行Google或问AI。
 
