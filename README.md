@@ -6,13 +6,15 @@
 
 ## 播放器内核
 
-所有平台上都集成了`MPV`。`Android`、`iOS`和`macOS`平台额外集成了**原生播放器（解码性能一般会比MPV高）**。
+本项目在所有平台上都集成了 `MPV`。其中 `Android`、`iOS` 和 `macOS` 额外支持**原生播放器**（通常具有更好的解码性能）。
 
-- **Android/TV**: 默认为`Media3 ExoPlayer + FFmpeg Extension`，也可使用`MPV`。
-- **iOS/iPadOS**: 默认为`AVPlayer`，也可使用`MPV`。
-- **macOS**: 默认为`AVPlayer`，也可使用`MPV`。
-- **Windows**: `MPV`。
-- **Linux**: `MPV`。
+| 平台 | 默认播放内核 | 备用播放内核 |
+| :--- | :--- | :--- |
+| **Android / TV** | `Media3 ExoPlayer` (+ FFmpeg) | `MPV` |
+| **iOS / iPadOS** | `AVPlayer` (原生) | `MPV` |
+| **macOS** | `AVPlayer` (原生) | `MPV` |
+| **Windows** | `MPV` | — |
+| **Linux** | `MPV` | — |
 
 ## Windows
 
