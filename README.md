@@ -36,10 +36,10 @@ Universal，支持Intel和Arm。
 
 查看[Linux使用文档](./docs/linux-install.md)
 
-## 备注
+## Notes
 
 此播放器的User Agent为`OpticPlayer/<version>`。**对于白名单模式Emby服，如果没加白，请求会失败(403响应)，导致无法登录和播放**。
 
-## 截图
+## Screenshot
 
 ![screenshot](./assets/screenshot.webp)
