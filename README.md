@@ -11,8 +11,8 @@
 | 平台 | 默认播放内核 | 备用播放内核 |
 | :--- | :--- | :--- |
 | **Android / TV** | `Media3 ExoPlayer` (+ FFmpeg Extension) | `MPV` |
-| **iOS / iPadOS** | `AVPlayer` (原生) | `MPV` |
-| **macOS** | `AVPlayer` (原生) | `MPV` |
+| **iOS / iPadOS** | `AVPlayer`  | `MPV` |
+| **macOS** | `AVPlayer` | `MPV` |
 | **Windows** | `MPV` | — |
 | **Linux** | `MPV` | — |
 
