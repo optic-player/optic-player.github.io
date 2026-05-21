@@ -12,21 +12,18 @@ const i18nDict = {
         nav_changelog: "Changelog",
         nav_download: "Download",
         nav_support: "Support",
-        hero_title: "The Cross-Platform Emby Client",
-        hero_subtitle: "Experience your media like never before with our elegant, Apple TV inspired interface. Built for performance, designed for beauty.",
+        hero_title: "The Ultimate Cross-Platform Emby Player",
+        hero_subtitle: "An elegant, Apple TV inspired cross-platform Emby player and client.",
         btn_download_now: "Download Now",
         btn_feedback: "Feedback",
         platforms_title: "Available Everywhere",
-        platforms_subtitle: "Seamless continuous playback across all your favorite devices.",
+        platforms_subtitle: "One Emby player for all your devices — seamless playback across Apple TV, Android TV, Windows, macOS, iOS, and Linux.",
         privacy_title: "Your Privacy Matters",
-        privacy_desc: "Optic Player respects your privacy. Our software does not collect, track, or share any of your personal information or viewing habits. Everything stays between your client and your Emby server.",
-        community_title: "Join the Community",
-        community_subtitle: "Optic Player development is driven by our users. Report bugs, suggest features, and connect with other users.",
+        privacy_desc: "Optic Player respects your privacy. Our software does not collect, track, or share any of your personal information or viewing habits. Everything stays between your app and your Emby server.",
         github_issues: "GitHub Issues",
         github_desc: "Report bugs and submit feature requests.",
         release_title: "What's New",
         release_subtitle: "Discover the latest features and improvements in Optic Player.",
-        coming_soon: "Coming Soon",
         req_appletv: "tvOS 13.0+",
         req_android: "Android 7.0+",
         req_ios: "iOS 13.0+",
@@ -44,7 +41,12 @@ const i18nDict = {
         core_subtitle: "Dual-engine architecture providing both MPV and highly optimized Native players for maximum decoding performance.",
         core_default: "Default",
         core_alt: "Alternative",
-        core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency."
+        core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency.",
+        changelog_category_changes: "Changes",
+        changelog_item_speed: "Improve playback initialization speed for MPV player",
+        changelog_item_ui: "Optimize UI/UX layouts and responsiveness",
+        changelog_item_seek: "Adjust fast-forward and rewind seek times to 5 seconds",
+        changelog_item_compat: "Enhance compatibility with various Emby server versions"
     },
     zh: {
         nav_home: "首页",
@@ -54,20 +56,17 @@ const i18nDict = {
         nav_download: "下载",
         nav_support: "支持",
         hero_title: "跨平台 Emby 播放器",
-        hero_subtitle: "通过优雅的、受 Apple TV 启发的界面，以前所未有的方式体验您的媒体。为性能而生，为感受而设计。",
+        hero_subtitle: "一款受 Apple TV 启发的优雅 Emby 客户端。",
         btn_download_now: "立即下载",
         btn_feedback: "问题反馈",
         platforms_title: "无处不在",
-        platforms_subtitle: "在所有设备上感受无缝、连续的播放体验。",
+        platforms_subtitle: "一个 Emby 播放器，覆盖所有设备 — 在 Apple TV、Android TV、Windows、macOS、iOS 和 Linux 上无缝播放。",
         privacy_title: "尊重您的隐私",
         privacy_desc: "Optic Player 不会收集、追踪或共享任何你的个人数据或观影习惯。所有数据仅存在于你的设备和 Emby 服务器之间。",
-        community_title: "加入社区",
-        community_subtitle: "Optic Player 开发始终由用户驱动。欢迎加入社区，报告错误、提交功能建议、与更多同好交流。",
         github_issues: "GitHub Issues",
         github_desc: "官方 Bug 追踪与反馈板块。",
         release_title: "更新日志",
         release_subtitle: "了解 Optic Player 的最新功能与优化改进。",
-        coming_soon: "敬请期待",
         req_appletv: "tvOS 13.0+",
         req_android: "Android 7.0+",
         req_ios: "iOS 13.0+",
@@ -85,7 +84,12 @@ const i18nDict = {
         core_subtitle: "全平台集成 MPV，并在移动端与桌面端提供高性能的原生播放器双引擎架构。",
         core_default: "默认",
         core_alt: "可选",
-        core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。"
+        core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。",
+        changelog_category_changes: "更改内容",
+        changelog_item_speed: "提高 MPV 播放器的起播速度",
+        changelog_item_ui: "优化 UI/UX 界面与交互体验",
+        changelog_item_seek: "快进快退时间调整为 5 秒",
+        changelog_item_compat: "提高 Emby 服务器版本兼容性"
     }
 };
 
@@ -93,10 +97,17 @@ const i18nDict = {
 let currentLanguage = 'en'; // Default fallback
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Detect browser language to auto-switch if Chinese is preferred
-    const browserLang = navigator.language || navigator.userLanguage;
-    if (browserLang.toLowerCase().includes('zh')) {
-        currentLanguage = 'zh';
+    // 1. Detect language from URL parameter first, then browser language
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
+
+    if (langParam && (langParam === 'en' || langParam === 'zh')) {
+        currentLanguage = langParam;
+    } else {
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang && browserLang.toLowerCase().includes('zh')) {
+            currentLanguage = 'zh';
+        }
     }
 
     // 2. Initialize text content
@@ -112,14 +123,41 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Applies the selected language to all elements with a [data-i18n] attribute.
+ * Helper to update or insert a meta tag by name.
+ */
+function updateMetaTag(name, content) {
+    let element = document.querySelector(`meta[name="${name}"]`);
+    if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute('name', name);
+        document.head.appendChild(element);
+    }
+    element.setAttribute('content', content);
+}
+
+/**
+ * Helper to update or insert a meta property (Open Graph).
+ */
+function updateMetaProperty(property, content) {
+    let element = document.querySelector(`meta[property="${property}"]`);
+    if (!element) {
+        element = document.createElement('meta');
+        element.setAttribute('property', property);
+        document.head.appendChild(element);
+    }
+    element.setAttribute('content', content);
+}
+
+/**
+ * Applies the selected language to all elements with a [data-i18n] attribute,
+ * and updates document metadata.
  * @param {string} lang - 'en' or 'zh'
  */
 function applyLanguage(lang) {
     const dict = i18nDict[lang];
     if (!dict) return;
 
-    // Update HTML lang attribute for SEO/Accessibility
+    // Update HTML lang attribute for Accessibility
     document.documentElement.lang = lang;
 
     // Update the toggle button text indicator
@@ -133,4 +171,37 @@ function applyLanguage(lang) {
             element.textContent = dict[key];
         }
     });
+
+    // Update page title, description, and keywords dynamically for different languages
+    if (lang === 'zh') {
+        document.title = "Optic Player - 跨平台 Emby 播放器/客户端 | Apple TV、Android、Windows、macOS、iOS、Linux";
+        updateMetaTag('description', "Optic Player 是一款优雅的跨平台 Emby 播放器与客户端，受 Apple TV 启发设计。支持 Windows、macOS、Linux、iOS、Android 及 Apple TV。全平台集成 MPV，移动端提供原生双引擎播放，4K 硬件加速解码，低功耗高性能。");
+        updateMetaTag('keywords', "Emby播放器, Emby客户端, 第三方Emby客户端, 第三方Emby播放器, 跨平台Emby播放器, Apple TV Emby, Android TV Emby, 电视Emby播放器, MPV播放器, Emby 4K硬解, 全平台Emby, macOS Emby, Windows Emby, iOS Emby, 影音播放器, Optic Player");
+
+        // Open Graph Metadata
+        updateMetaProperty('og:title', "Optic Player - 跨平台 Emby 播放器与客户端");
+        updateMetaProperty('og:description', "优雅的跨平台 Emby 播放器/客户端，支持 Apple TV、Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
+
+        // Twitter Card Metadata
+        updateMetaTag('twitter:title', "Optic Player - 跨平台 Emby 播放器与客户端");
+        updateMetaTag('twitter:description', "优雅的跨平台 Emby 播放器/客户端，支持 Apple TV、Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
+
+        // Locale
+        updateMetaProperty('og:locale', 'zh_CN');
+    } else {
+        document.title = "Optic Player - Cross-Platform Emby Player & Client | Apple TV, Android, Windows, macOS, iOS, Linux";
+        updateMetaTag('description', "Optic Player is an elegant, Apple TV-inspired cross-platform Emby player and client. Available on Windows, macOS, Linux, iOS, Android & Apple TV. Features MPV and native dual-engine playback for superior 4K hardware decoding performance and low power consumption.");
+        updateMetaTag('keywords', "Emby player, Emby client, Emby app, cross-platform Emby player, third party Emby client, Apple TV Emby, Android TV Emby player, MPV Emby player, Windows Emby player, macOS Emby player, Linux Emby player, iOS Emby player, 4K Emby player, media server player, Optic Player");
+
+        // Open Graph Metadata
+        updateMetaProperty('og:title', "Optic Player - Cross-Platform Emby Player & Client");
+        updateMetaProperty('og:description', "An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
+
+        // Twitter Card Metadata
+        updateMetaTag('twitter:title', "Optic Player - Cross-Platform Emby Player & Client");
+        updateMetaTag('twitter:description', "An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
+
+        // Locale
+        updateMetaProperty('og:locale', 'en_US');
+    }
 }

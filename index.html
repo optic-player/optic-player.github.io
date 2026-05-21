@@ -11,54 +11,126 @@
         gtag('config', 'G-4T2WKLFLB6');
     </script>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Optic Player - Emby Client</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Primary Metadata -->
+    <title>Optic Player - Cross-Platform Emby Player & Client</title>
+    <meta name="description"
+        content="Optic Player is an elegant, Apple TV-inspired cross-platform Emby player and client. Available on Windows, macOS, Linux, iOS, Android & Apple TV. Features MPV and native dual-engine playback for superior 4K hardware decoding performance and low power consumption.">
+    <meta name="keywords"
+        content="Emby player, Emby client, Emby app, cross-platform Emby player, third party Emby client, Apple TV Emby, Android TV Emby player, MPV Emby player, Windows Emby player, macOS Emby player, Linux Emby player, iOS Emby player, 4K Emby player, media server player, Optic Player">
+    <meta name="author" content="Optic Player">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optic-player.github.io/">
+    <link rel="alternate" hreflang="en" href="https://optic-player.github.io/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://optic-player.github.io/?lang=zh">
+    <link rel="alternate" hreflang="x-default" href="https://optic-player.github.io/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Optic Player">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:url" content="https://optic-player.github.io/">
+    <meta property="og:title" content="Optic Player - Cross-Platform Emby Player & Client">
+    <meta property="og:description"
+        content="An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.">
+    <meta property="og:image" content="https://optic-player.github.io/assets/screenshot.webp">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1000">
+    <meta property="og:image:alt" content="Optic Player Showcase Interface">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://optic-player.github.io/">
+    <meta name="twitter:title" content="Optic Player - Cross-Platform Emby Player & Client">
+    <meta name="twitter:description"
+        content="An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.">
+    <meta name="twitter:image" content="https://optic-player.github.io/assets/screenshot.webp">
+
     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
     <link rel="icon" type="image/webp" href="assets/logo.webp">
+    <link rel="apple-touch-icon" href="assets/logo.webp">
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0A0A0B">
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Boxicons for scalable vector icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Core styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Optic Player",
+      "url": "https://optic-player.github.io/",
+      "operatingSystem": "Windows 10/11, macOS, Linux, Android, iOS, tvOS",
+      "applicationCategory": "MultimediaApplication",
+      "softwareVersion": "0.2.2",
+      "datePublished": "2026-05-20",
+      "description": "An elegant, Apple TV-inspired cross-platform Emby player and client. Available on Windows, macOS, Linux, iOS, Android, and Apple TV. Dual playback engines including MPV, ExoPlayer, and AVPlayer for superior format compatibility and 4K hardware decoding.",
+      "image": "https://optic-player.github.io/assets/logo.webp",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "downloadUrl": "https://github.com/optic-player/optic-player.github.io/releases/latest",
+      "screenshot": "https://optic-player.github.io/assets/screenshot.webp"
+    }
+    </script>
 </head>
 
 <body>
+    <noscript>
+        <div style="text-align:center;padding:2rem;color:#fff;background:#111;">Please enable JavaScript for the best
+            experience on the Optic Player website.</div>
+    </noscript>
     <!-- Background element for ambient glow -->
     <div class="ambient-background"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <!-- 💡 Replace the src link below with your actual logo file -->
-                <img src="assets/logo.webp" alt="Optic Player Logo" class="logo-img">
-                <span class="logo-text">Optic Player</span>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/logo.webp" alt="Optic Player Logo" class="logo-img">
+                    <span class="logo-text">Optic Player</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" data-i18n="nav_home">Home</a>
+                    <a href="#features" data-i18n="nav_features">Features</a>
+                    <a href="#player-core" data-i18n="nav_core">Core</a>
+                    <a href="#release-notes" data-i18n="nav_changelog">Changelog</a>
+                    <a href="#support" data-i18n="nav_support">Support</a>
+                </div>
+                <div class="nav-controls">
+                    <button id="langToggle" class="lang-btn" aria-label="Toggle Language">
+                        <i class='bx bx-globe'></i> <span id="currentLang">EN</span>
+                    </button>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#home" data-i18n="nav_home">Home</a>
-                <a href="#features" data-i18n="nav_features">Features</a>
-                <a href="#player-core" data-i18n="nav_core">内核</a>
-                <a href="#release-notes" data-i18n="nav_changelog">Changelog</a>
-                <a href="#support" data-i18n="nav_support">Support</a>
-            </div>
-            <div class="nav-controls">
-                <button id="langToggle" class="lang-btn" aria-label="Toggle Language">
-                    <i class='bx bx-globe'></i> <span id="currentLang">EN</span>
-                </button>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <div class="tech-badge">Optic Player 0.2.2</div>
-                <h1 class="gradient-text" data-i18n="hero_title">The Cross-Platform Emby Client</h1>
-                <p data-i18n="hero_subtitle">Experience your media like never before with our elegant, Apple TV inspired
-                    interface. Built for performance, designed for beauty.</p>
+                <div class="tech-badge">Optic Player v0.2.2</div>
+                <h1>
+                    <span class="hero-brand gradient-text">Optic Player</span>
+                    <span class="hero-tagline gradient-text" data-i18n="hero_title">The Cross-Platform Emby
+                        Player</span>
+                </h1>
+                <p data-i18n="hero_subtitle">An elegant, Apple TV inspired cross-platform Emby player and client.</p>
                 <div class="hero-actions">
                     <a href="https://github.com/optic-player/optic-player.github.io/releases/latest" target="_blank"
                         class="btn btn-primary glow-btn"><span data-i18n="btn_download_now">Download Now</span><i
@@ -76,7 +148,8 @@
                         <span class="dot green"></span>
                         <div class="showcase-title">Optic Player</div>
                     </div>
-                    <img src="assets/screenshot.webp" alt="App Interface" class="showcase-img">
+                    <img src="assets/screenshot.webp" alt="Optic Player - Apple TV inspired elegant interface showcase"
+                        class="showcase-img">
                 </div>
             </div>
         </section>
@@ -84,8 +157,8 @@
         <!-- Features/Platforms Section -->
         <section id="features" class="section">
             <h2 class="section-title" data-i18n="platforms_title">Available Everywhere</h2>
-            <p class="section-subtitle" data-i18n="platforms_subtitle">Seamless continuous playback across all your
-                favorite devices.</p>
+            <p class="section-subtitle" data-i18n="platforms_subtitle">One Emby player for all your devices —
+                seamless playback across Apple TV, Android TV, Windows, macOS, iOS, and Linux.</p>
 
             <div class="platforms-grid">
                 <!-- Windows Series -->
@@ -142,8 +215,9 @@
 
         <!-- Player Core Section -->
         <section id="player-core" class="section">
-            <h2 class="section-title" data-i18n="core_title">强大的播放内核</h2>
-            <p class="section-subtitle" data-i18n="core_subtitle">全平台集成 MPV，并在移动端与桌面端提供高性能的原生播放器双引擎架构。</p>
+            <h2 class="section-title" data-i18n="core_title">Powerful Playback Engines</h2>
+            <p class="section-subtitle" data-i18n="core_subtitle">Dual-engine architecture providing both MPV and highly
+                optimized Native players for maximum decoding performance.</p>
 
             <div class="core-grid">
                 <div class="core-card glass-card">
@@ -151,9 +225,9 @@
                     <div class="core-info">
                         <h3 data-translate="no">Android / TV</h3>
                         <div class="engine-tag primary"><i class='bx bx-check-shield'></i> <span
-                                data-i18n="core_default">默认</span>: Media3 ExoPlayer + FFmpeg</div>
+                                data-i18n="core_default">Default</span>: Media3 ExoPlayer + FFmpeg</div>
                         <div class="engine-tag secondary"><i class='bx bx-chip'></i> <span
-                                data-i18n="core_alt">可选</span>: MPV</div>
+                                data-i18n="core_alt">Alternative</span>: MPV</div>
                     </div>
                 </div>
 
@@ -162,9 +236,9 @@
                     <div class="core-info">
                         <h3 data-translate="no">iOS / iPadOS / macOS</h3>
                         <div class="engine-tag primary"><i class='bx bx-check-shield'></i> <span
-                                data-i18n="core_default">默认</span>: AVPlayer</div>
+                                data-i18n="core_default">Default</span>: AVPlayer</div>
                         <div class="engine-tag secondary"><i class='bx bx-chip'></i> <span
-                                data-i18n="core_alt">可选</span>: MPV</div>
+                                data-i18n="core_alt">Alternative</span>: MPV</div>
                     </div>
                 </div>
 
@@ -174,15 +248,16 @@
                     <div class="core-info">
                         <h3 data-translate="no">Windows / Linux</h3>
                         <div class="engine-tag primary"><i class='bx bx-check-shield'></i> <span
-                                data-i18n="core_default">默认</span>: MPV</div>
+                                data-i18n="core_default">Default</span>: MPV</div>
                     </div>
                 </div>
             </div>
 
             <div class="core-note glass-card">
                 <i class='bx bx-info-circle'></i>
-                <p data-i18n="core_note">我们在所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple
-                    设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。</p>
+                <p data-i18n="core_note">Optic Player integrates MPV across all platforms for ultimate format
+                    compatibility. On Apple and Android devices, we also provide optimized Native Players as the default
+                    option, offering superior hardware decoding performance and battery efficiency.</p>
             </div>
         </section>
 
@@ -201,12 +276,16 @@
                 </div>
                 <div class="release-content">
                     <div class="release-category">
-                        <h4 class="category-title new"><i class='bx bx-star'></i> <span>Changes</span></h4>
+                        <h3 class="category-title new"><i class='bx bx-star'></i> <span
+                                data-i18n="changelog_category_changes">Changes</span></h3>
                         <ul>
-                            <li>提高MPV播放器的起播速度</li>
-                            <li>优化UI/UX</li>
-                            <li>快进快退时间调整为5秒</li>
-                            <li>提高Emby兼容性</li>
+                            <li data-i18n="changelog_item_speed">Improve playback initialization speed for MPV player
+                            </li>
+                            <li data-i18n="changelog_item_ui">Optimize UI/UX layouts and responsiveness</li>
+                            <li data-i18n="changelog_item_seek">Adjust fast-forward and rewind seek times to 5 seconds
+                            </li>
+                            <li data-i18n="changelog_item_compat">Enhance compatibility with various Emby server
+                                versions</li>
                         </ul>
                     </div>
                 </div>
@@ -243,7 +322,7 @@
     </footer>
 
     <!-- Logic scripts -->
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 
 </html>
