@@ -1,4 +1,5 @@
 # Optic Player
+[![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-Get_it_now-0078D4?style=for-the-badge&logo=windows&logoColor=white)](https://apps.microsoft.com/detail/9PMT50SVSPL0)
 
 这是Optic Player的发布仓库。不含源码，可能会开源，有时间整理的话。
 
