@@ -18,7 +18,13 @@
 
 ## Windows
 
-需安装VC运行库最新版：[去微软下载](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) 。
+<a href="https://apps.microsoft.com/detail/9PMT50SVSPL0?referrer=appbadge&mode=full" target="_blank"  rel="noopener noreferrer">
+	<img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200"/>
+</a>
+
+（注：通过 Microsoft Store 安装会自动处理依赖，无需手动安装 VC 运行库）
+
+如果你从 GitHub 下载ZIP包，则需手动安装 VC 运行库最新版：[去微软下载](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist)。
 
 ## Android
 
