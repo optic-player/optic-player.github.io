@@ -44,10 +44,11 @@ const i18nDict = {
         core_alt: "Alternative",
         core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency.",
         changelog_category_changes: "Changes",
-        changelog_item_speed: "Improve playback initialization speed for MPV player",
-        changelog_item_ui: "Optimize UI/UX layouts and responsiveness",
-        changelog_item_seek: "Adjust fast-forward and rewind seek times to 5 seconds",
-        changelog_item_compat: "Enhance compatibility with various Emby server versions"
+        changelog_item_search: "Add universal search feature",
+        changelog_item_top: "Add always-on-top window feature for the player",
+        changelog_item_tv_ui: "Fix unexpected hiding of player control bar on Android TV",
+        changelog_item_compat: "Enhance compatibility with various Emby servers",
+        changelog_item_ui: "Optimize UI/UX"
     },
     zh: {
         nav_home: "首页",
@@ -59,7 +60,7 @@ const i18nDict = {
         hero_title: "跨平台 Emby 播放器",
         hero_subtitle: "一款受 Apple TV 启发的优雅 Emby 客户端。",
         btn_download_github: "前往 GitHub 下载 (全平台)",
-        btn_ms_store_windows: "Microsoft Store (仅 Windows)",
+        btn_ms_store_windows: "Microsoft Store (Windows)",
         btn_feedback: "问题反馈",
         platforms_title: "无处不在",
         platforms_subtitle: "一个 Emby 播放器，覆盖所有设备 — 在 Apple TV、Android TV、Windows、macOS、iOS 和 Linux 上无缝播放。",
@@ -88,10 +89,11 @@ const i18nDict = {
         core_alt: "可选",
         core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。",
         changelog_category_changes: "更改内容",
-        changelog_item_speed: "提高 MPV 播放器的起播速度",
-        changelog_item_ui: "优化 UI/UX 界面与交互体验",
-        changelog_item_seek: "快进快退时间调整为 5 秒",
-        changelog_item_compat: "提高 Emby 服务器版本兼容性"
+        changelog_item_search: "新增聚合搜索功能",
+        changelog_item_top: "新增播放器窗口置顶功能",
+        changelog_item_tv_ui: "修改 Android TV 上播放器控制栏突然隐藏的问题",
+        changelog_item_compat: "提高各种 Emby 服的兼容性",
+        changelog_item_ui: "优化 UI/UX"
     }
 };
 
