@@ -158,6 +158,7 @@ function updateMetaProperty(property, content) {
  * @param {string} lang - 'en' or 'zh'
  */
 function applyLanguage(lang) {
+    if (!Object.prototype.hasOwnProperty.call(i18nDict, lang)) return;
     const dict = i18nDict[lang];
     if (!dict) return;
 
@@ -171,7 +172,7 @@ function applyLanguage(lang) {
     const elementsToTranslate = document.querySelectorAll('[data-i18n]');
     elementsToTranslate.forEach(element => {
         const key = element.getAttribute('data-i18n');
-        if (dict[key]) {
+        if (Object.prototype.hasOwnProperty.call(dict, key)) {
             element.textContent = dict[key];
         }
     });
