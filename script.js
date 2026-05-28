@@ -91,7 +91,7 @@ const i18nDict = {
         changelog_category_changes: "更改内容",
         changelog_item_search: "新增聚合搜索功能",
         changelog_item_top: "新增播放器窗口置顶功能",
-        changelog_item_tv_ui: "修改 Android TV 上播放器控制栏突然隐藏的问题",
+        changelog_item_tv_ui: "修复 Android TV 上播放器控制栏突然隐藏的问题",
         changelog_item_compat: "提高各种 Emby 服的兼容性",
         changelog_item_ui: "优化 UI/UX"
     }
