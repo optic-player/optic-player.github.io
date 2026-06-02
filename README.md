@@ -3,7 +3,9 @@
 
 这是Optic Player的发布仓库。不含源码，可能会开源，有时间整理的话。
 
-本项目为自用，暂时只支持Emby。
+本项目为自用，**暂时只支持Emby，但该有的功能都有**。
+
+**在PC上，如果需要让播放器走本机的代理软件，请使用TUN模式。**
 
 ## 播放器内核
 
@@ -11,7 +13,7 @@
 
 | 平台 | 默认播放内核 | 备用播放内核 |
 | :--- | :--- | :--- |
-| **Android / TV** | `Media3 ExoPlayer` (+ FFmpeg Extension) | `MPV` |
+| **Android / TV** | `Media3 ExoPlayer (+ FFmpeg Extension)` | `MPV` |
 | **iOS / iPadOS** | `AVPlayer`  | `MPV` |
 | **macOS** | `AVPlayer` | `MPV` |
 | **Windows** | `MPV` | — |
@@ -23,7 +25,7 @@
 	<img src="https://get.microsoft.com/images/zh-cn%20dark.svg" width="200"/>
 </a>
 
-（注：通过 Microsoft Store 安装会自动处理依赖，无需手动安装 VC 运行库）
+> 通过 Microsoft Store 安装会自动处理依赖，无需手动安装 VC 运行库
 
 如果你从 GitHub 下载ZIP包，则需手动安装 VC 运行库最新版：[去微软下载](https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist)。
 
