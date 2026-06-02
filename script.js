@@ -99,7 +99,7 @@ const i18nDict = {
 let currentLanguage = 'en'; // Default fallback
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Detect language from URL parameter first, then browser language
+    // ─── 1. Language Detection ───
     const urlParams = new URLSearchParams(window.location.search);
     const langParam = urlParams.get('lang');
 
@@ -118,11 +118,160 @@ document.addEventListener('DOMContentLoaded', () => {
     // 3. Bind language toggle button
     const langBtn = document.getElementById('langToggle');
     langBtn.addEventListener('click', () => {
-        // Toggle language state
         currentLanguage = currentLanguage === 'en' ? 'zh' : 'en';
         applyLanguage(currentLanguage);
     });
+
+    // ─── 4. Scroll Reveal (IntersectionObserver) ───
+    initScrollReveal();
+
+    // ─── 5. Navbar Scroll Enhancement ───
+    initNavbarScroll();
+
+    // ─── 6. Active Nav Link Highlighting ───
+    initActiveNavLink();
+
+    // ─── 7. Mouse-Follow Glow (Desktop only) ───
+    initMouseGlow();
 });
+
+/* ═══════════════════════════════════════════
+   SCROLL REVEAL
+   Uses IntersectionObserver to add .revealed
+   class when elements enter the viewport.
+   Supports stagger delays via data-delay.
+   ═══════════════════════════════════════════ */
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    if (!revealElements.length) return;
+
+    // Respect prefers-reduced-motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealElements.forEach(el => el.classList.add('revealed'));
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const delay = parseInt(el.dataset.delay, 10) || 0;
+
+                setTimeout(() => {
+                    el.classList.add('revealed');
+                }, delay);
+
+                observer.unobserve(el);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => observer.observe(el));
+}
+
+/* ═══════════════════════════════════════════
+   NAVBAR SCROLL ENHANCEMENT
+   Adds .scrolled class when page is scrolled
+   beyond a threshold for enhanced visual state.
+   ═══════════════════════════════════════════ */
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+
+    let ticking = false;
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // Run once on init
+    onScroll();
+}
+
+/* ═══════════════════════════════════════════
+   ACTIVE NAV LINK
+   Highlights the nav link corresponding to
+   the section currently in view.
+   ═══════════════════════════════════════════ */
+function initActiveNavLink() {
+    const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const sections = [];
+
+    navLinks.forEach(link => {
+        const id = link.getAttribute('href').slice(1);
+        const section = document.getElementById(id);
+        if (section) sections.push({ link, section });
+    });
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const match = sections.find(s => s.section === entry.target);
+            if (match) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    match.link.classList.add('active');
+                }
+            }
+        });
+    }, {
+        threshold: 0.3,
+        rootMargin: '-80px 0px -40% 0px'
+    });
+
+    sections.forEach(s => observer.observe(s.section));
+}
+
+/* ═══════════════════════════════════════════
+   MOUSE-FOLLOW GLOW (Desktop)
+   Subtle radial glow that follows the cursor.
+   Disabled on touch / small-screen devices.
+   ═══════════════════════════════════════════ */
+function initMouseGlow() {
+    const glow = document.getElementById('mouseGlow');
+    if (!glow) return;
+
+    // Skip on touch devices or narrow screens
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouch || window.innerWidth < 768) return;
+
+    let animFrame = null;
+
+    document.addEventListener('mousemove', (e) => {
+        if (animFrame) cancelAnimationFrame(animFrame);
+
+        animFrame = requestAnimationFrame(() => {
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+            if (!glow.classList.contains('active')) {
+                glow.classList.add('active');
+            }
+        });
+    });
+
+    document.addEventListener('mouseleave', () => {
+        glow.classList.remove('active');
+    });
+}
+
+/* ═══════════════════════════════════════════
+   i18n HELPERS
+   ═══════════════════════════════════════════ */
 
 /**
  * Helper to update or insert a meta tag by name.

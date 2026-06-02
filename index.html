@@ -96,6 +96,19 @@
     <!-- Background element for ambient glow -->
     <div class="ambient-background"></div>
 
+    <!-- Floating decorative particles -->
+    <div class="floating-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Mouse-follow glow (desktop) -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
     <!-- Header with Navigation -->
     <header>
         <nav class="navbar">
@@ -163,15 +176,18 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider"></div>
+
         <!-- Features/Platforms Section -->
         <section id="features" class="section">
-            <h2 class="section-title" data-i18n="platforms_title">Available Everywhere</h2>
-            <p class="section-subtitle" data-i18n="platforms_subtitle">One Emby player for all your devices —
+            <h2 class="section-title" data-i18n="platforms_title" data-reveal>Available Everywhere</h2>
+            <p class="section-subtitle" data-i18n="platforms_subtitle" data-reveal>One Emby player for all your devices —
                 seamless playback across Apple TV, Android TV, Windows, macOS, iOS, and Linux.</p>
 
             <div class="platforms-grid">
                 <!-- Windows Series -->
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="0">
                     <i class='bx bxl-windows'></i>
                     <h3 data-translate="no">Windows</h3>
                     <p class="req" data-i18n="req_windows">Windows 10/11</p>
@@ -179,13 +195,13 @@
                 </div>
 
                 <!-- Android Series -->
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="60">
                     <i class='bx bxl-android'></i>
                     <h3 data-translate="no">Android</h3>
                     <p class="req" data-i18n="req_android">Android 7.0+</p>
                     <p class="arch" data-i18n="arch_android">Universal</p>
                 </div>
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="120">
                     <i class='bx bx-tv'></i>
                     <h3 data-translate="no">Android TV</h3>
                     <p class="req" data-i18n="req_android">Android 7.0+</p>
@@ -193,19 +209,19 @@
                 </div>
 
                 <!-- Apple Series -->
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="180">
                     <i class='bx bxl-apple'></i>
                     <h3 data-translate="no">macOS</h3>
                     <p class="req" data-i18n="req_macos">macOS 10.15+</p>
                     <p class="arch" data-i18n="arch_macos">Universal</p>
                 </div>
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="240">
                     <i class='bx bxl-apple'></i>
                     <h3 data-translate="no">iOS</h3>
                     <p class="req" data-i18n="req_ios">iOS 13.0+</p>
                     <p class="arch" data-i18n="arch_ios">ARM64</p>
                 </div>
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="300">
                     <i class='bx bxl-apple'></i>
                     <h3 data-translate="no">Apple TV</h3>
                     <p class="req" data-i18n="req_appletv">tvOS 13.0+</p>
@@ -213,7 +229,7 @@
                 </div>
 
                 <!-- Linux Series -->
-                <div class="platform-card glass-card">
+                <div class="platform-card glass-card" data-reveal data-delay="360">
                     <i class='bx bxl-tux'></i>
                     <h3 data-translate="no">Linux</h3>
                     <p class="req" data-i18n="req_linux">Common</p>
@@ -222,14 +238,17 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider"></div>
+
         <!-- Player Core Section -->
         <section id="player-core" class="section">
-            <h2 class="section-title" data-i18n="core_title">Powerful Playback Engines</h2>
-            <p class="section-subtitle" data-i18n="core_subtitle">Dual-engine architecture providing both MPV and highly
+            <h2 class="section-title" data-i18n="core_title" data-reveal>Powerful Playback Engines</h2>
+            <p class="section-subtitle" data-i18n="core_subtitle" data-reveal>Dual-engine architecture providing both MPV and highly
                 optimized Native players for maximum decoding performance.</p>
 
             <div class="core-grid">
-                <div class="core-card glass-card">
+                <div class="core-card glass-card" data-reveal="left" data-delay="0">
                     <div class="core-icon android-color"><i class='bx bxl-android'></i> <i class='bx bx-tv'></i></div>
                     <div class="core-info">
                         <h3 data-translate="no">Android / TV</h3>
@@ -240,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="core-card glass-card">
+                <div class="core-card glass-card" data-reveal data-delay="100">
                     <div class="core-icon apple-color"><i class='bx bxl-apple'></i></div>
                     <div class="core-info">
                         <h3 data-translate="no">iOS / iPadOS / macOS</h3>
@@ -251,7 +270,7 @@
                     </div>
                 </div>
 
-                <div class="core-card glass-card">
+                <div class="core-card glass-card" data-reveal="right" data-delay="200">
                     <div class="core-icon win-linux-color"><i class='bx bxl-windows'></i> <i class='bx bxl-tux'></i>
                     </div>
                     <div class="core-info">
@@ -262,7 +281,7 @@
                 </div>
             </div>
 
-            <div class="core-note glass-card">
+            <div class="core-note glass-card" data-reveal="scale">
                 <i class='bx bx-info-circle'></i>
                 <p data-i18n="core_note">Optic Player integrates MPV across all platforms for ultimate format
                     compatibility. On Apple and Android devices, we also provide optimized Native Players as the default
@@ -270,12 +289,15 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider"></div>
+
         <!-- Release Notes Section -->
         <section id="release-notes" class="section">
-            <h2 class="section-title" data-i18n="release_title">What's New</h2>
-            <p class="section-subtitle" data-i18n="release_subtitle">Discover the latest features and improvements.</p>
+            <h2 class="section-title" data-i18n="release_title" data-reveal>What's New</h2>
+            <p class="section-subtitle" data-i18n="release_subtitle" data-reveal>Discover the latest features and improvements.</p>
 
-            <div class="release-container glass-card">
+            <div class="release-container glass-card" data-reveal="scale">
                 <div class="release-header">
                     <div class="release-version">
                         <i class='bx bx-purchase-tag-alt'></i>
@@ -300,11 +322,14 @@
             </div>
         </section>
 
+        <!-- Section Divider -->
+        <div class="section-divider"></div>
+
         <!-- Bottom Info Section -->
         <section id="support" class="section">
             <div class="bottom-cards-grid">
                 <!-- Privacy Card -->
-                <div class="privacy-card glass-card">
+                <div class="privacy-card glass-card" data-reveal="left">
                     <div class="privacy-icon"><i class='bx bx-shield-quarter'></i></div>
                     <h2 data-i18n="privacy_title">Your Privacy Matters</h2>
                     <p data-i18n="privacy_desc">Optic Player respects your privacy. Our software does not collect,
@@ -316,7 +341,7 @@
 
                 <!-- GitHub Support Card -->
                 <a href="https://github.com/optic-player/optic-player.github.io/issues" target="_blank"
-                    class="support-card glass-card">
+                    class="support-card glass-card" data-reveal="right">
                     <div class="support-icon"><i class='bx bxl-github'></i></div>
                     <h2 data-i18n="github_issues">GitHub Issues</h2>
                     <p data-i18n="github_desc">Report bugs and submit feature requests.</p>
