@@ -4,9 +4,9 @@
 
 # Optic Player
 
-一款跨平台的 Emby 客户端播放器
+[English](./README-en.md) | 中文
 
-[![GitHub Releases](https://img.shields.io/badge/GitHub-Releases-181717?style=for-the-badge&logo=github)](https://github.com/optic-player/optic-player.github.io/releases)
+一款跨平台的 Emby 客户端播放器
 
 [![Windows](https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0wIDBoMTEuNXYxMS41SDBWMHptMTIuNSAwSDI0djExLjVIMTIuNVYwek0wIDEyLjVoMTEuNVYyNEgwVjEyLjV6bTEyLjUgMEgyNFYyNEgxMi41VjEyLjV6Ii8+PC9zdmc+)](https://apps.microsoft.com/detail/9PMT50SVSPL0)
 [![Android](https://img.shields.io/badge/Android-3DDC84?style=flat-square&logo=android&logoColor=white)](https://github.com/optic-player/optic-player.github.io/releases/latest)

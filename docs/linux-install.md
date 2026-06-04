@@ -1,5 +1,7 @@
 # Optic Player - Linux 安装与使用指南
 
+[English](./linux-install-en.md) | 中文
+
 Optic Player 为 Linux 提供两种分发格式，请根据你的需求选择合适的安装方式。
 
 ---
