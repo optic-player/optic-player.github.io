@@ -1,55 +1,19 @@
 # Optic Player - Linux 安装与使用指南
 
-Optic Player 为 Linux 提供三种分发格式，请根据你的需求选择合适的安装方式。
+Optic Player 为 Linux 提供两种分发格式，请根据你的需求选择合适的安装方式。
 
 ---
 
 ## 📦 格式对比
 
-| 格式 | 适用场景 | 沙箱隔离 | 系统依赖 |
-|------|---------|---------|---------|
-| **Snap** | 推荐大多数用户 | ✅ | 无需额外安装 |
-| **AppImage** | 想要单文件便携运行 | ❌ | 需安装 libmpv |
-| **ZIP** | 高级用户 / 自定义部署 | ❌ | 需安装 GTK3 + libmpv |
+| 格式 | 适用场景 | 特点 | 系统依赖 |
+|------|---------|------|---------|
+| **AppImage** | 推荐大多数用户 | 单文件便携，下载即用 | 需安装 libmpv |
+| **ZIP** | 高级用户 / 自定义部署 | 可自由选择安装位置 | 需安装 GTK3 + libmpv |
 
 ---
 
-## 方式一：Snap（推荐）
-
-Snap 是最便捷的安装方式，所有运行时依赖已内置打包。
-
-### 安装
-
-```bash
-# 从本地 .snap 文件安装（--dangerous 用于未签名的本地包）
-sudo snap install optic-player-*.snap --dangerous
-```
-
-### 运行
-
-```bash
-optic-player
-```
-
-或从应用程序菜单中搜索 **Optic Player** 启动。
-
-### 卸载
-
-```bash
-sudo snap remove optic-player
-```
-
-### 注意事项
-
-- 需要系统已安装 `snapd`（Ubuntu 默认已预装）
-- 其他发行版安装 snapd：
-  - **Fedora**: `sudo dnf install snapd`
-  - **Arch Linux**: `sudo pacman -S snapd`
-  - **openSUSE**: `sudo zypper install snapd`
-
----
-
-## 方式二：AppImage
+## 方式一：AppImage（推荐）
 
 AppImage 是一个单文件可执行格式，无需安装即可运行。
 
@@ -83,7 +47,11 @@ chmod +x optic_player-*-Linux-x64.AppImage
 如果希望在应用程序菜单中显示，可以使用 [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher) 自动集成，或手动创建 `.desktop` 文件：
 
 ```bash
-mkdir -p ~/.local/share/applications
+mkdir -p ~/.local/share/applications ~/.local/share/icons
+
+# 下载应用图标
+wget -O ~/.local/share/icons/optic-player.webp \
+  "https://raw.githubusercontent.com/optic-player/optic-player.github.io/refs/heads/main/assets/logo.webp"
 
 cat > ~/.local/share/applications/optic-player.desktop << 'EOF'
 [Desktop Entry]
@@ -91,12 +59,12 @@ Type=Application
 Name=Optic Player
 Comment=A modern cinematic media player
 Exec=/path/to/optic_player-Linux-x64.AppImage
-Icon=optic_player
+Icon=/home/USERNAME/.local/share/icons/optic-player.webp
 Categories=AudioVideo;Video;Player;
 EOF
 ```
 
-> 请将 `/path/to/` 替换为 AppImage 文件的实际路径。
+> 请将 `/path/to/` 替换为 AppImage 文件的实际路径，将 `USERNAME` 替换为你的用户名。
 
 ### 故障排除
 
@@ -112,7 +80,7 @@ sudo apt install libfuse2
 
 ---
 
-## 方式三：ZIP 压缩包
+## 方式二：ZIP 压缩包
 
 ZIP 包适合高级用户和自定义部署场景。
 
@@ -153,16 +121,24 @@ ln -sf ~/Applications/OpticPlayer/OpticPlayer ~/.local/bin/optic-player
 ### 创建桌面快捷方式（可选）
 
 ```bash
+mkdir -p ~/.local/share/applications ~/.local/share/icons
+
+# 下载应用图标（如已下载可跳过）
+wget -O ~/.local/share/icons/optic-player.webp \
+  "https://raw.githubusercontent.com/optic-player/optic-player.github.io/refs/heads/main/assets/logo.webp"
+
 cat > ~/.local/share/applications/optic-player.desktop << 'EOF'
 [Desktop Entry]
 Type=Application
 Name=Optic Player
 Comment=A modern cinematic media player
 Exec=$HOME/Applications/OpticPlayer/OpticPlayer
-Icon=optic_player
+Icon=/home/USERNAME/.local/share/icons/optic-player.webp
 Categories=AudioVideo;Video;Player;
 EOF
 ```
+
+> 请将 `USERNAME` 替换为你的用户名。
 
 ---
 
