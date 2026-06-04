@@ -18,7 +18,6 @@ A cross-platform Emby client player
 
 ---
 
-> This project is for personal use, **currently only supports Emby, but it has all the necessary features**.  
 > This is the release repository for Optic Player. It does not contain source code, but might be open-sourced in the future (if there is time to organize it).
 
 ## 📑 Table of Contents
