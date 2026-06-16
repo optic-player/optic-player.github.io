@@ -45,10 +45,11 @@ const i18nDict = {
         core_alt: "Alternative",
         core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency.",
         changelog_category_changes: "Changes",
-        changelog_item_context_menu: "Add Context Menu, PC right-click or mobile long-press to summon",
-        changelog_item_search_scroll: "Fix scrolling overlap issue on the search page",
-        changelog_item_emby_compat: "Optimize Emby server compatibility",
-        changelog_item_ui_ux: "Optimize UI/UX"
+        changelog_item_android_speed: "Add network speed display during buffering on Android",
+        changelog_item_player_compat: "Improve player compatibility",
+        changelog_item_ui_perf: "Optimize UI performance",
+        changelog_item_pc_esc: "Add back shortcut key on PC: ESC",
+        changelog_item_deps: "Upgrade related dependencies to the latest version"
     },
     zh: {
         nav_home: "首页",
@@ -90,10 +91,11 @@ const i18nDict = {
         core_alt: "可选",
         core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。",
         changelog_category_changes: "更改内容",
-        changelog_item_context_menu: "新增上下文菜单，PC右键、移动设备长按可以召唤菜单",
-        changelog_item_search_scroll: "修复搜索页滚动重叠问题",
-        changelog_item_emby_compat: "优化Emby服务器兼容性",
-        changelog_item_ui_ux: "优化UI/UX"
+        changelog_item_android_speed: "增加Android缓冲时网速显示",
+        changelog_item_player_compat: "提高播放器兼容性",
+        changelog_item_ui_perf: "优化UI性能",
+        changelog_item_pc_esc: "PC端增加返回快捷键：ESC",
+        changelog_item_deps: "升级相关依赖到最新版"
     }
 };
 
