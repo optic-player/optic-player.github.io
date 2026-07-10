@@ -45,11 +45,17 @@ const i18nDict = {
         core_alt: "Alternative",
         core_note: "Optic Player integrates MPV across all platforms for ultimate format compatibility. On Apple and Android devices, we also provide optimized Native Players as the default option, offering superior hardware decoding performance and battery efficiency.",
         changelog_category_changes: "Changes",
-        changelog_item_android_speed: "Add network speed display during buffering on Android",
-        changelog_item_player_compat: "Improve player compatibility",
-        changelog_item_ui_perf: "Optimize UI performance",
-        changelog_item_pc_esc: "Add back shortcut key on PC: ESC",
-        changelog_item_deps: "Upgrade related dependencies to the latest version"
+        changelog_category_bug_fixes: "Bug Fixes",
+        changelog_item_danmaku: "Add high-performance Danmaku system",
+        changelog_item_pc_subtitle: "Add local subtitle loading support on PC",
+        changelog_item_mpv_subtitle_sync: "Add subtitle timeline synchronization control for MPV player",
+        changelog_item_media_network_upgrade: "Media library and network core upgrade: New data model with paginated loading and retry, plus network pooling for improved media playback and data loading efficiency",
+        changelog_item_player_refactor: "Deep player refactoring: Large-scale refactoring of the player's underlying logic and UI components",
+        changelog_item_playback_fail_retry: "Display retry button and detailed error message after playback fails",
+        changelog_item_ui_ux_optimize: "Optimize UI/UX",
+        changelog_fix_seasons_limit: "Fix loading and display issues with 'Seasons Limit' in long series",
+        changelog_fix_ui_overflow: "Fix UI overflow issues in some interfaces",
+        changelog_fix_progress_report: "Fix playback progress not being reported when going back"
     },
     zh: {
         nav_home: "首页",
@@ -91,11 +97,17 @@ const i18nDict = {
         core_alt: "可选",
         core_note: "所有平台均内置了强大的 MPV 播放器以保证最大的格式兼容性。在此基础上，Android 与 Apple 设备额外集成了深度优化的原生播放器作为默认项，为您带来更卓越的解码性能和更低的功耗表现。",
         changelog_category_changes: "更改内容",
-        changelog_item_android_speed: "增加Android缓冲时网速显示",
-        changelog_item_player_compat: "提高播放器兼容性",
-        changelog_item_ui_perf: "优化UI性能",
-        changelog_item_pc_esc: "PC端增加返回快捷键：ESC",
-        changelog_item_deps: "升级相关依赖到最新版"
+        changelog_category_bug_fixes: "修复内容",
+        changelog_item_danmaku: "新增高性能弹幕系统",
+        changelog_item_pc_subtitle: "PC端增加本地字幕挂载功能",
+        changelog_item_mpv_subtitle_sync: "MPV播放器增加字幕时间轴同步控制",
+        changelog_item_media_network_upgrade: "媒体库与网络核心升级：实现了全新的媒体库数据模型及分页加载重试，引入网络请求池化 (Network Pooling) 优化加载效率",
+        changelog_item_player_refactor: "播放器深度重构：对底层逻辑及 UI 组件进行了大规模重构",
+        changelog_item_playback_fail_retry: "在播放失败后，显示重试按钮和详细错误信息",
+        changelog_item_ui_ux_optimize: "优化UI/UX",
+        changelog_fix_seasons_limit: "修复了长剧集中的“季数限制 (Seasons Limit)”加载和显示问题",
+        changelog_fix_ui_overflow: "修复了部分界面发生 UI 溢出 (Overflow) 的问题",
+        changelog_fix_progress_report: "修复了后退时播放进度不上报的问题"
     }
 };
 
