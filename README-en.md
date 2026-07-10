@@ -61,7 +61,7 @@ One APK supports phones, tablets, and TVs (built-in TV support).
 
 Universal build, supporting Intel and Apple Silicon.
 
-### 📱 iOS / iPadOS / Apple TV
+### 📱 iOS / iPadOS
 
 Not signed, not available on the App Store (cannot get a US developer account). You will need to figure out how to install it yourself via Google or asking an AI.
 

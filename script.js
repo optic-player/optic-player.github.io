@@ -14,25 +14,25 @@ const i18nDict = {
         nav_support: "Support",
         badge_free: "Free Forever",
         hero_title: "The Ultimate Cross-Platform Emby Player",
-        hero_subtitle: "An elegant, Apple TV inspired cross-platform Emby player and client.",
+        hero_subtitle: "An elegant, cross-platform Emby player and client.",
         btn_download_github: "Download via GitHub (All Platforms)",
         btn_ms_store_windows: "Microsoft Store (Windows)",
         btn_feedback: "Feedback",
         platforms_title: "Available Everywhere",
-        platforms_subtitle: "One Emby player for all your devices — seamless playback across Apple TV, Android TV, Windows, macOS, iOS, and Linux.",
+        platforms_subtitle: "One Emby player for all your devices — seamless playback across Android TV, Windows, macOS, iOS, and Linux.",
         privacy_title: "Your Privacy Matters",
         privacy_desc: "Optic Player respects your privacy. Our software does not collect, track, or share any of your personal information or viewing habits. Everything stays between your app and your Emby server.",
         github_issues: "GitHub Issues",
         github_desc: "Report bugs and submit feature requests.",
         release_title: "What's New",
         release_subtitle: "Discover the latest features and improvements in Optic Player.",
-        req_appletv: "tvOS 13.0+",
+
         req_android: "Android 7.0+",
         req_ios: "iOS 13.0+",
         req_windows: "Windows 10/11",
         req_macos: "macOS 10.15+",
         req_linux: "Common",
-        arch_appletv: "ARM64",
+
         arch_androidtv: "Universal",
         arch_ios: "ARM64",
         arch_android: "Universal",
@@ -66,25 +66,25 @@ const i18nDict = {
         nav_support: "支持",
         badge_free: "永久免费",
         hero_title: "跨平台 Emby 播放器",
-        hero_subtitle: "一款受 Apple TV 启发的优雅 Emby 客户端。",
+        hero_subtitle: "一款优雅的跨平台 Emby 客户端。",
         btn_download_github: "前往 GitHub 下载 (全平台)",
         btn_ms_store_windows: "Microsoft Store (Windows)",
         btn_feedback: "问题反馈",
         platforms_title: "无处不在",
-        platforms_subtitle: "一个 Emby 播放器，覆盖所有设备 — 在 Apple TV、Android TV、Windows、macOS、iOS 和 Linux 上无缝播放。",
+        platforms_subtitle: "一个 Emby 播放器，覆盖所有设备 — 在 Android TV、Windows、macOS、iOS 和 Linux 上无缝播放。",
         privacy_title: "尊重您的隐私",
         privacy_desc: "Optic Player 不会收集、追踪或共享任何你的个人数据或观影习惯。所有数据仅存在于你的设备和 Emby 服务器之间。",
         github_issues: "GitHub Issues",
         github_desc: "官方 Bug 追踪与反馈板块。",
         release_title: "更新日志",
         release_subtitle: "了解 Optic Player 的最新功能与优化改进。",
-        req_appletv: "tvOS 13.0+",
+
         req_android: "Android 7.0+",
         req_ios: "iOS 13.0+",
         req_windows: "Windows 10/11",
         req_macos: "macOS 10.15+",
         req_linux: "Common",
-        arch_appletv: "ARM64",
+
         arch_androidtv: "Universal",
         arch_ios: "ARM64",
         arch_android: "Universal",
@@ -342,32 +342,32 @@ function applyLanguage(lang) {
 
     // Update page title, description, and keywords dynamically for different languages
     if (lang === 'zh') {
-        document.title = "Optic Player - 跨平台 Emby 播放器/客户端 | Apple TV、Android、Windows、macOS、iOS、Linux";
-        updateMetaTag('description', "Optic Player 是一款优雅的跨平台 Emby 播放器与客户端，受 Apple TV 启发设计。支持 Windows、macOS、Linux、iOS、Android 及 Apple TV。全平台集成 MPV，移动端提供原生双引擎播放，4K 硬件加速解码，低功耗高性能。");
-        updateMetaTag('keywords', "Emby播放器, Emby客户端, 第三方Emby客户端, 第三方Emby播放器, 跨平台Emby播放器, Apple TV Emby, Android TV Emby, 电视Emby播放器, MPV播放器, Emby 4K硬解, 全平台Emby, macOS Emby, Windows Emby, iOS Emby, 影音播放器, Optic Player");
+        document.title = "Optic Player - 跨平台 Emby 播放器/客户端 | Android、Windows、macOS、iOS、Linux";
+        updateMetaTag('description', "Optic Player 是一款优雅的跨平台 Emby 播放器与客户端。支持 Windows、macOS、Linux、iOS、和 Android。全平台集成 MPV，移动端提供原生双引擎播放，4K 硬件加速解码，低功耗高性能。");
+        updateMetaTag('keywords', "Emby播放器, Emby客户端, 第三方Emby客户端, 第三方Emby播放器, 跨平台Emby播放器, Android TV Emby, 电视Emby播放器, MPV播放器, Emby 4K硬解, 全平台Emby, macOS Emby, Windows Emby, iOS Emby, 影音播放器, Optic Player");
 
         // Open Graph Metadata
         updateMetaProperty('og:title', "Optic Player - 跨平台 Emby 播放器与客户端");
-        updateMetaProperty('og:description', "优雅的跨平台 Emby 播放器/客户端，支持 Apple TV、Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
+        updateMetaProperty('og:description', "优雅的跨平台 Emby 播放器/客户端，支持 Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
 
         // Twitter Card Metadata
         updateMetaTag('twitter:title', "Optic Player - 跨平台 Emby 播放器与客户端");
-        updateMetaTag('twitter:description', "优雅的跨平台 Emby 播放器/客户端，支持 Apple TV、Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
+        updateMetaTag('twitter:description', "优雅的跨平台 Emby 播放器/客户端，支持 Android、Windows、macOS、iOS 及 Linux。MPV + 原生双引擎，4K 硬件解码。");
 
         // Locale
         updateMetaProperty('og:locale', 'zh_CN');
     } else {
-        document.title = "Optic Player - Cross-Platform Emby Player & Client | Apple TV, Android, Windows, macOS, iOS, Linux";
-        updateMetaTag('description', "Optic Player is an elegant, Apple TV-inspired cross-platform Emby player and client. Available on Windows, macOS, Linux, iOS, Android & Apple TV. Features MPV and native dual-engine playback for superior 4K hardware decoding performance and low power consumption.");
-        updateMetaTag('keywords', "Emby player, Emby client, Emby app, cross-platform Emby player, third party Emby client, Apple TV Emby, Android TV Emby player, MPV Emby player, Windows Emby player, macOS Emby player, Linux Emby player, iOS Emby player, 4K Emby player, media server player, Optic Player");
+        document.title = "Optic Player - Cross-Platform Emby Player & Client | Android, Windows, macOS, iOS, Linux";
+        updateMetaTag('description', "Optic Player is an elegant, cross-platform Emby player and client. Available on Windows, macOS, Linux, iOS, and Android. Features MPV and native dual-engine playback for superior 4K hardware decoding performance and low power consumption.");
+        updateMetaTag('keywords', "Emby player, Emby client, Emby app, cross-platform Emby player, third party Emby client, Android TV Emby player, MPV Emby player, Windows Emby player, macOS Emby player, Linux Emby player, iOS Emby player, 4K Emby player, media server player, Optic Player");
 
         // Open Graph Metadata
         updateMetaProperty('og:title', "Optic Player - Cross-Platform Emby Player & Client");
-        updateMetaProperty('og:description', "An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
+        updateMetaProperty('og:description', "An elegant cross-platform Emby player & client for Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
 
         // Twitter Card Metadata
         updateMetaTag('twitter:title', "Optic Player - Cross-Platform Emby Player & Client");
-        updateMetaTag('twitter:description', "An elegant cross-platform Emby player & client for Apple TV, Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
+        updateMetaTag('twitter:description', "An elegant cross-platform Emby player & client for Android, Windows, macOS, iOS & Linux. Dual-engine playback with MPV and native players for 4K hardware decoding.");
 
         // Locale
         updateMetaProperty('og:locale', 'en_US');

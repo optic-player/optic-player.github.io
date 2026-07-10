@@ -62,7 +62,7 @@
 
 Universal 构建，支持 Intel 和 Apple Silicon。
 
-### 📱 iOS / iPadOS / Apple TV
+### 📱 iOS / iPadOS
 
 不签名、不上架 App Store（搞不到美区开发者号）。使用方式自行 Google 或问 AI。
 
