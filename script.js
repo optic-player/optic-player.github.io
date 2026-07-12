@@ -55,7 +55,13 @@ const i18nDict = {
         changelog_item_ui_ux_optimize: "Optimize UI/UX",
         changelog_fix_seasons_limit: "Fix loading and display issues with 'Seasons Limit' in long series",
         changelog_fix_ui_overflow: "Fix UI overflow issues in some interfaces",
-        changelog_fix_progress_report: "Fix playback progress not being reported when going back"
+        changelog_fix_progress_report: "Fix playback progress not being reported when going back",
+        changelog_031_item_exo_memory: "Android Media3 ExoPlayer uses default memory size limit",
+        changelog_031_item_danmaku_optimize: "Optimize Danmaku system: Cache priority, font optimization",
+        changelog_031_item_random_sort: "Add \"Random\" sort option",
+        changelog_031_fix_win_stutter: "Fix Windows video stuttering during panning",
+        changelog_031_fix_image_blur: "Fix image blurring issue",
+        changelog_031_fix_mouse_lag: "Fix sluggish mouse response on the playback interface"
     },
     zh: {
         nav_home: "首页",
@@ -107,7 +113,13 @@ const i18nDict = {
         changelog_item_ui_ux_optimize: "优化UI/UX",
         changelog_fix_seasons_limit: "修复了长剧集中的“季数限制 (Seasons Limit)”加载和显示问题",
         changelog_fix_ui_overflow: "修复了部分界面发生 UI 溢出 (Overflow) 的问题",
-        changelog_fix_progress_report: "修复了后退时播放进度不上报的问题"
+        changelog_fix_progress_report: "修复了后退时播放进度不上报的问题",
+        changelog_031_item_exo_memory: "Android Media3 ExoPlayer 使用默认内存大小限制",
+        changelog_031_item_danmaku_optimize: "优化弹幕系统：缓存优先、字体优化",
+        changelog_031_item_random_sort: "新增“随机”排序",
+        changelog_031_fix_win_stutter: "修复 Windows 视频画面在平移时的卡顿问题",
+        changelog_031_fix_image_blur: "修复图片模糊问题",
+        changelog_031_fix_mouse_lag: "修复播放界面鼠标响应迟钝问题"
     }
 };
 
