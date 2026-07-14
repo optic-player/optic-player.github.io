@@ -20,16 +20,17 @@ A cross-platform Emby client player
 
 > This is the release repository for Optic Player. It does not contain source code, but might be open-sourced in the future (if there is time to organize it).
 
-## 📑 Table of Contents
+## Table of Contents
 
-- [⚙️ Player Core](#️-player-core)
-- [📥 Installation Guide](#-installation-guide)
-- [⚠️ Important Notes](#️-important-notes)
+- [Player Core](#player-core)
+- [Danmaku System](#danmaku-system)
+- [Installation Guide](#installation-guide)
+- [Important Notes](#important-notes)
 
 ![screenshot](./assets/screenshot.webp)
 
 
-## ⚙️ Player Core
+## Player Core
 
 All platforms integrate `MPV`, and some platforms additionally support a **native player** (which usually offers better decoding performance).
 
@@ -41,35 +42,44 @@ All platforms integrate `MPV`, and some platforms additionally support a **nativ
 | **Windows** | `MPV` | — |
 | **Linux** | `MPV` | — |
 
-## 📥 Installation Guide
+## Danmaku System
 
-### 🪟 Windows
+Compatible with the DanDanPlay danmaku API, as well as `danmu_api` and `misaka_danmu_server`. For the latter two danmaku API services, the player automatically detects and supports their URL formats.
+
+- The player does not include a built-in danmaku source server. You need to find and add a danmaku source yourself.
+- This danmaku system was developed in-house with performance as its priority, using multithreaded processing as much as possible.
+- Both automatic and manual danmaku matching are supported.
+- The current number of danmaku tracks is configured conservatively. If too many danmaku comments cause the frame rate to fall below 60 FPS, the danmaku scheduler will drop some comments as needed to maintain 60 FPS and preserve performance.
+
+## Installation Guide
+
+### Windows
 
 <a href="https://apps.microsoft.com/detail/9PMT50SVSPL0?referrer=appbadge&mode=full" target="_blank" rel="noopener noreferrer">
 	<img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200"/>
 </a>
 
-> 💡 Installing via the Microsoft Store will automatically handle dependencies, no need to manually install VC runtime libraries.
+> Installing via the Microsoft Store will automatically handle dependencies, no need to manually install VC runtime libraries.
 
 If you download the ZIP package from GitHub, you need to manually install the latest version of the VC runtime library: [Download from Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist).
 
-### 🤖 Android
+### Android
 
 One APK supports phones, tablets, and TVs (built-in TV support).
 
-### 🍏 macOS
+### macOS
 
 Universal build, supporting Intel and Apple Silicon.
 
-### 📱 iOS / iPadOS
+### iOS / iPadOS
 
 Not signed, not available on the App Store (cannot get a US developer account). You will need to figure out how to install it yourself via Google or asking an AI.
 
-### 🐧 Linux
+### Linux
 
 See [Linux Installation Guide](./docs/linux-install-en.md)
 
-## ⚠️ Important Notes
+## Important Notes
 
 - On PC, if you need the player to route through your local proxy software, please use **TUN mode**.
 
