@@ -11,6 +11,7 @@ Optic Player 为 Linux 提供两种分发格式，请根据你的需求选择合
 | 格式 | 适用场景 | 特点 | 系统依赖 |
 |------|---------|------|---------|
 | **AppImage** | 推荐大多数用户 | 单文件便携，下载即用 | 需安装 libmpv |
+| **Flatpak** | 推荐沙盒环境用户 | 统一包管理，自带依赖 | 无（自带依赖） |
 | **ZIP** | 高级用户 / 自定义部署 | 可自由选择安装位置 | 需安装 GTK3 + libmpv |
 
 ---
@@ -82,7 +83,29 @@ sudo apt install libfuse2
 
 ---
 
-## 方式二：ZIP 压缩包
+## 方式二：Flatpak
+
+Flatpak 提供了一个沙盒环境，拥有更好的安全性和系统隔离性。
+
+### 安装
+
+请先确保系统已安装 Flatpak。下载 `.flatpak` 安装包后，通过命令行安装：
+
+```bash
+flatpak install ./optic_player-*-Linux-x64.flatpak
+```
+
+### 运行
+
+安装完成后，你可以从应用菜单启动 Optic Player，或者通过命令行运行：
+
+```bash
+flatpak run cloud.obe.opticplayer
+```
+
+---
+
+## 方式三：ZIP 压缩包
 
 ZIP 包适合高级用户和自定义部署场景。
 
@@ -149,6 +172,17 @@ EOF
 - **架构**: x86_64 (amd64)
 - **显示服务器**: X11 或 Wayland
 - **GPU**: 推荐支持 OpenGL 3.0+ 的显卡驱动
+- **字体**: 强烈建议安装 **Noto Sans CJK SC** 字体以获得最佳的中文显示效果。
+  ```bash
+  # Debian / Ubuntu
+  sudo apt install fonts-noto-cjk
+
+  # Fedora
+  sudo dnf install google-noto-sans-cjk-sc-fonts
+
+  # Arch Linux
+  sudo pacman -S noto-fonts-cjk
+  ```
 
 ## ❓ 常见问题
 
