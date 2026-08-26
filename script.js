@@ -28,9 +28,9 @@ const i18nDict = {
         release_subtitle: "Discover the latest features and improvements in Optic Player.",
 
         req_android: "Android 7.0+",
-        req_ios: "iOS 13.0+",
+        req_ios: "iOS 15.0+",
         req_windows: "Windows 10/11",
-        req_macos: "macOS 10.15+",
+        req_macos: "macOS 12.0+",
         req_linux: "Common",
 
         arch_androidtv: "Universal",
@@ -83,9 +83,9 @@ const i18nDict = {
         release_subtitle: "了解 Optic Player 的最新功能与优化改进。",
 
         req_android: "Android 7.0+",
-        req_ios: "iOS 13.0+",
+        req_ios: "iOS 15.0+",
         req_windows: "Windows 10/11",
-        req_macos: "macOS 10.15+",
+        req_macos: "macOS 12.0+",
         req_linux: "Common",
 
         arch_androidtv: "Universal",
