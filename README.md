@@ -85,3 +85,5 @@ Universal 构建，支持 Intel 和 Apple Silicon。
 - 在 PC 上，如果需要让播放器走本机的代理软件，请使用 **TUN 模式**。
 
 - 此播放器的 User Agent 为 `OpticPlayer/<version>`。**对于白名单模式 Emby 服，如果没加白，请求会失败（403 响应），导致无法登录和播放。**
+
+- **HDR10 / DV5 / DV8 支持情况**：Windows 和 Linux 平台由 libplacebo 映射到SDR；Android、iOS 及 macOS 平台则由原生播放器自动进行硬件解码和色彩映射，若设备缺少相应格式的解码器支持则会解码失败。

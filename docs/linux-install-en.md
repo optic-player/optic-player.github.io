@@ -2,7 +2,7 @@
 
 [中文](./linux-install.md) | English
 
-Optic Player provides two distribution formats for Linux. Please choose the appropriate installation method according to your needs.
+Optic Player provides three distribution formats for Linux. We highly recommend using the **Flatpak** format for the most stable and out-of-the-box experience.
 
 ---
 
@@ -10,13 +10,35 @@ Optic Player provides two distribution formats for Linux. Please choose the appr
 
 | Format | Applicable Scenarios | Features | System Dependencies |
 |------|---------|------|---------|
-| **AppImage** | Recommended for most users | Single portable file, download and run | Requires libmpv |
-| **Flatpak** | Recommended for sandboxed environments | Unified package management, includes dependencies | None (Dependencies included) |
+| **Flatpak** | **Recommended (Out of the box)** | Unified package management, includes all dependencies | None (Dependencies included) |
+| **AppImage** | Portable / Standalone | Single portable file, download and run | Requires libmpv |
 | **ZIP** | Advanced users / Custom deployment | Freedom to choose installation location | Requires GTK3 + libmpv |
 
 ---
 
-## Method 1: AppImage (Recommended)
+## Method 1: Flatpak (Recommended)
+
+Flatpak provides a complete sandboxed runtime environment with all necessary media and graphics dependencies pre-bundled, requiring no manual system library configuration. It is the most recommended way to install on Linux.
+
+### Installation
+
+Please ensure Flatpak is installed on your system (most mainstream distributions like Fedora, Ubuntu, Arch, etc. either come with it or can install it via their package manager). After downloading the `.flatpak` package, install it via command line:
+
+```bash
+flatpak install ./optic_player-*-Linux-x64.flatpak
+```
+
+### Run
+
+Once installed, you can launch Optic Player from your application menu, or run it via command line:
+
+```bash
+flatpak run cloud.obe.opticplayer
+```
+
+---
+
+## Method 2: AppImage
 
 AppImage is a single-file executable format that can run without installation.
 
@@ -79,28 +101,6 @@ sudo apt install libfuse2
 
 # Or run in extract mode (no FUSE required)
 ./optic_player-*-Linux-x64.AppImage --appimage-extract-and-run
-```
-
----
-
-## Method 2: Flatpak
-
-Flatpak provides a sandboxed environment with better security and system isolation.
-
-### Installation
-
-Please ensure Flatpak is installed on your system. After downloading the `.flatpak` package, install it via command line:
-
-```bash
-flatpak install ./optic_player-*-Linux-x64.flatpak
-```
-
-### Run
-
-Once installed, you can launch Optic Player from your application menu, or run it via command line:
-
-```bash
-flatpak run cloud.obe.opticplayer
 ```
 
 ---

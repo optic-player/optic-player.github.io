@@ -2,7 +2,7 @@
 
 [English](./linux-install-en.md) | 中文
 
-Optic Player 为 Linux 提供两种分发格式，请根据你的需求选择合适的安装方式。
+Optic Player 为 Linux 提供三种分发格式，优先推荐使用 **Flatpak** 格式以获得最稳定、开箱即用的体验。
 
 ---
 
@@ -10,13 +10,35 @@ Optic Player 为 Linux 提供两种分发格式，请根据你的需求选择合
 
 | 格式 | 适用场景 | 特点 | 系统依赖 |
 |------|---------|------|---------|
-| **AppImage** | 推荐大多数用户 | 单文件便携，下载即用 | 需安装 libmpv |
-| **Flatpak** | 推荐沙盒环境用户 | 统一包管理，自带依赖 | 无（自带依赖） |
+| **Flatpak** | **推荐（开箱即用）** | 统一包管理，自带所有依赖 | 无（自带依赖） |
+| **AppImage** | 便携使用 / 免安装 | 单文件可执行，下载即用 | 需安装 libmpv |
 | **ZIP** | 高级用户 / 自定义部署 | 可自由选择安装位置 | 需安装 GTK3 + libmpv |
 
 ---
 
-## 方式一：AppImage（推荐）
+## 方式一：Flatpak（推荐）
+
+Flatpak 提供了一个完整的沙盒运行环境，内置了所有必要的媒体与图形依赖，无需手动配置系统库，是 Linux 下最推荐的安装方式。
+
+### 安装
+
+请先确保系统已安装 Flatpak。下载 `.flatpak` 安装包后，通过命令行安装：
+
+```bash
+flatpak install ./optic_player-*-Linux-x64.flatpak
+```
+
+### 运行
+
+安装完成后，你可以从应用菜单启动 Optic Player，或者通过命令行运行：
+
+```bash
+flatpak run cloud.obe.opticplayer
+```
+
+---
+
+## 方式二：AppImage
 
 AppImage 是一个单文件可执行格式，无需安装即可运行。
 
@@ -79,28 +101,6 @@ sudo apt install libfuse2
 
 # 或使用提取模式运行（无需 FUSE）
 ./optic_player-*-Linux-x64.AppImage --appimage-extract-and-run
-```
-
----
-
-## 方式二：Flatpak
-
-Flatpak 提供了一个沙盒环境，拥有更好的安全性和系统隔离性。
-
-### 安装
-
-请先确保系统已安装 Flatpak。下载 `.flatpak` 安装包后，通过命令行安装：
-
-```bash
-flatpak install ./optic_player-*-Linux-x64.flatpak
-```
-
-### 运行
-
-安装完成后，你可以从应用菜单启动 Optic Player，或者通过命令行运行：
-
-```bash
-flatpak run cloud.obe.opticplayer
 ```
 
 ---

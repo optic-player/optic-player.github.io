@@ -56,10 +56,9 @@ const i18nDict = {
         changelog_fix_seasons_limit: "Fix loading and display issues with 'Seasons Limit' in long series",
         changelog_fix_ui_overflow: "Fix UI overflow issues in some interfaces",
         changelog_fix_progress_report: "Fix playback progress not being reported when going back",
-        changelog_032_item_android_memory: "Optimize memory usage for low memory Android devices",
-        changelog_032_item_ui_optimize: "Optimize UI",
-        changelog_032_fix_win_flicker: "Fix Windows playback flickering and black screen issues",
-        changelog_032_fix_android_resume: "Fix playback error when resuming progress on Android"
+        changelog_034_item_hdr: "Add HDR10 / DV5 / DV8 support",
+        changelog_034_item_mobile_brightness: "Add gesture brightness control on mobile devices",
+        changelog_034_fix_network_overflow: "Fix UI overflow issues on network errors"
     },
     zh: {
         nav_home: "首页",
@@ -112,10 +111,9 @@ const i18nDict = {
         changelog_fix_seasons_limit: "修复了长剧集中的“季数限制 (Seasons Limit)”加载和显示问题",
         changelog_fix_ui_overflow: "修复了部分界面发生 UI 溢出 (Overflow) 的问题",
         changelog_fix_progress_report: "修复了后退时播放进度不上报的问题",
-        changelog_032_item_android_memory: "优化Android低内存设备的内存使用",
-        changelog_032_item_ui_optimize: "优化UI",
-        changelog_032_fix_win_flicker: "修复Windows播放频闪和黑屏问题",
-        changelog_032_fix_android_resume: "修复Android恢复播放进度时播放出错的问题"
+        changelog_034_item_hdr: "新增 HDR10 / DV5 / DV8 支持",
+        changelog_034_item_mobile_brightness: "移动端新增手势亮度调节",
+        changelog_034_fix_network_overflow: "修复网络错误时 UI 溢出问题"
     }
 };
 

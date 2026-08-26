@@ -84,3 +84,5 @@ See [Linux Installation Guide](./docs/linux-install-en.md)
 - On PC, if you need the player to route through your local proxy software, please use **TUN mode**.
 
 - The User Agent for this player is `OpticPlayer/<version>`. **For Emby servers with a whitelist mode, if not added to the whitelist, requests will fail (403 response), causing login and playback to fail.**
+ 
+- **HDR10 / DV5 / DV8 Support**: On Windows and Linux, tone mapping to SDR is handled by libplacebo; on Android, iOS, and macOS, hardware decoding and color tone mapping are handled automatically by native players. If the device lacks decoder support for the corresponding format, decoding will fail.
