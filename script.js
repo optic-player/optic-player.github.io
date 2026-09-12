@@ -56,9 +56,8 @@ const i18nDict = {
         changelog_fix_seasons_limit: "Fix loading and display issues with 'Seasons Limit' in long series",
         changelog_fix_ui_overflow: "Fix UI overflow issues in some interfaces",
         changelog_fix_progress_report: "Fix playback progress not being reported when going back",
-        changelog_034_item_hdr: "Add HDR10 / DV5 / DV8 support",
-        changelog_034_item_mobile_brightness: "Add gesture brightness control on mobile devices",
-        changelog_034_fix_network_overflow: "Fix UI overflow issues on network errors"
+        changelog_035_item_emby_compat: "Improve Emby compatibility",
+        changelog_035_item_auto_orientation: "Automatically switch to landscape or portrait mode based on video aspect ratio during playback"
     },
     zh: {
         nav_home: "首页",
@@ -111,9 +110,8 @@ const i18nDict = {
         changelog_fix_seasons_limit: "修复了长剧集中的“季数限制 (Seasons Limit)”加载和显示问题",
         changelog_fix_ui_overflow: "修复了部分界面发生 UI 溢出 (Overflow) 的问题",
         changelog_fix_progress_report: "修复了后退时播放进度不上报的问题",
-        changelog_034_item_hdr: "新增 HDR10 / DV5 / DV8 支持",
-        changelog_034_item_mobile_brightness: "移动端新增手势亮度调节",
-        changelog_034_fix_network_overflow: "修复网络错误时 UI 溢出问题"
+        changelog_035_item_emby_compat: "提高Emby兼容性",
+        changelog_035_item_auto_orientation: "播放时根据视频比例会自动进入横屏和竖屏"
     }
 };
 
