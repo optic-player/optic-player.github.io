@@ -18,24 +18,6 @@ Optic Player 为 Linux 系统提供完整的多媒体播放支持。为了提供
 | **高级色彩链路** | **全内置** (`libplacebo 7.360.1` + `FFmpeg 8.1.2` + `mpv 0.41.0`) | 依赖宿主 `libmpv` 是否集成 `libplacebo` | 依赖宿主 `libmpv` 是否集成 `libplacebo` |
 | **推荐指数** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 
-```mermaid
-graph LR
-    subgraph Flatpak["1. Flatpak (官方首选发布格式)"]
-        F1["完全自包含 libplacebo + FFmpeg + libmpv"]
-        F2["依赖: org.freedesktop.Platform 25.08"]
-        F3["支持: x86_64 与 aarch64"]
-    end
-    subgraph AppImage["2. AppImage (便携单文件)"]
-        A1["依赖宿主 libmpv.so.2"]
-        A2["依赖宿主 libfuse2 (Ubuntu 22.04+)"]
-        A3["仅 x86_64"]
-    end
-    subgraph Zip["3. ZIP Bundle (解压直接运行)"]
-        Z1["依赖宿主 GTK3 + libmpv.so.2 + libsecret-1"]
-        Z2["仅 x86_64"]
-    end
-```
-
 ---
 
 ## 🖥️ 核心系统要求总览
@@ -56,19 +38,6 @@ graph LR
 ## 🎬 视频播放与色彩链路特殊要求
 
 Optic Player 的视频播放核心依赖于定制编译的 `media_kit` + `libmpv` + `libplacebo` + `FFmpeg` 完整链路：
-
-```mermaid
-flowchart TD
-    VideoSource["Emby 视频流 (SDR / HDR / Dolby Vision)"] --> Decoder["libmpv 解码器"]
-    Decoder --> FormatCheck{"色彩格式检测"}
-    FormatCheck -- "SDR / 普通视频" --> GLRender["OpenGL 纹理输出 (零拷贝原生路径)"]
-    FormatCheck -- "HDR10 / HLG / DV P8" --> Placebo["libplacebo (lavfi-libplacebo)"]
-    FormatCheck -- "Dolby Vision Profile 5" --> PlaceboStrict["libplacebo 严格模式"]
-    PlaceboStrict --> VulkanDev{"Vulkan 设备就绪?"}
-    VulkanDev -- "支持" --> Tonemap["HDR→SDR BT.709 色调映射"] --> GLRender
-    VulkanDev -- "无 Vulkan 设备" --> FailP5["报错提示: 驱动不支持，不降级为错误色调"]
-    Placebo --> Tonemap
-```
 
 1. **SDR 媒体播放**：
    - 依赖基础 OpenGL 硬件加速（Mesa 开源驱动或专有显卡驱动），采用零拷贝纹理渲染路径。

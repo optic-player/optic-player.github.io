@@ -18,24 +18,6 @@ Optic Player supports three distribution formats, each with different host depen
 | **Color Pipeline** | **Fully self-contained** (`libplacebo 7.360.1` + `FFmpeg 8.1.2` + `mpv 0.41.0`) | Depends on host `libmpv` build with `libplacebo` | Depends on host `libmpv` build with `libplacebo` |
 | **Recommendation** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
 
-```mermaid
-graph LR
-    subgraph Flatpak["1. Flatpak (Official Primary Format)"]
-        F1["Self-contained libplacebo + FFmpeg + libmpv"]
-        F2["Runtime: org.freedesktop.Platform 25.08"]
-        F3["Supports: x86_64 & aarch64"]
-    end
-    subgraph AppImage["2. AppImage (Portable Binary)"]
-        A1["Requires host libmpv.so.2"]
-        A2["Requires host libfuse2 (Ubuntu 22.04+)"]
-        A3["x86_64 only"]
-    end
-    subgraph Zip["3. ZIP Bundle (Direct Unpack)"]
-        Z1["Requires host GTK3 + libmpv.so.2 + libsecret-1"]
-        Z2["x86_64 only"]
-    end
-```
-
 ---
 
 ## 🖥️ Core System Requirements
@@ -56,19 +38,6 @@ graph LR
 ## 🎬 Media Playback & Color Pipeline Requirements
 
 Optic Player's video playback core relies on a custom-compiled pipeline of `media_kit` + `libmpv` + `libplacebo` + `FFmpeg`:
-
-```mermaid
-flowchart TD
-    VideoSource["Emby Media Stream (SDR / HDR / Dolby Vision)"] --> Decoder["libmpv Decoder"]
-    Decoder --> FormatCheck{"Color Format Check"}
-    FormatCheck -- "SDR / Standard Video" --> GLRender["OpenGL Texture Output (Zero-Copy Native Path)"]
-    FormatCheck -- "HDR10 / HLG / DV P8" --> Placebo["libplacebo (lavfi-libplacebo)"]
-    FormatCheck -- "Dolby Vision Profile 5" --> PlaceboStrict["libplacebo Strict Mode"]
-    PlaceboStrict --> VulkanDev{"Vulkan Device Ready?"}
-    VulkanDev -- "Supported" --> Tonemap["HDR→SDR BT.709 Tone Mapping"] --> GLRender
-    VulkanDev -- "No Vulkan Device" --> FailP5["Error: Driver unsupported, forbid fallback to distorted colors"]
-    Placebo --> Tonemap
-```
 
 1. **SDR Media Playback**:
    - Relies on basic OpenGL hardware acceleration (Mesa open-source drivers or proprietary GPU drivers), utilizing a zero-copy texture rendering path.
