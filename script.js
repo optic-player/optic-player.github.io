@@ -56,8 +56,9 @@ const i18nDict = {
         changelog_fix_seasons_limit: "Fix loading and display issues with 'Seasons Limit' in long series",
         changelog_fix_ui_overflow: "Fix UI overflow issues in some interfaces",
         changelog_fix_progress_report: "Fix playback progress not being reported when going back",
-        changelog_035_item_emby_compat: "Improve Emby compatibility",
-        changelog_035_item_auto_orientation: "Automatically switch to landscape or portrait mode based on video aspect ratio during playback"
+        changelog_036_item_optimize_ui: "Optimize UI",
+        changelog_036_item_update_mpv: "Update MPV to the latest version",
+        changelog_036_fix_tv_control_bar: "Fix playback control bar not auto-hiding on TV devices"
     },
     zh: {
         nav_home: "首页",
@@ -110,8 +111,9 @@ const i18nDict = {
         changelog_fix_seasons_limit: "修复了长剧集中的“季数限制 (Seasons Limit)”加载和显示问题",
         changelog_fix_ui_overflow: "修复了部分界面发生 UI 溢出 (Overflow) 的问题",
         changelog_fix_progress_report: "修复了后退时播放进度不上报的问题",
-        changelog_035_item_emby_compat: "提高Emby兼容性",
-        changelog_035_item_auto_orientation: "播放时根据视频比例会自动进入横屏和竖屏"
+        changelog_036_item_optimize_ui: "优化UI",
+        changelog_036_item_update_mpv: "更新MPV到最新版",
+        changelog_036_fix_tv_control_bar: "修复播放页控制栏在TV端不自动隐藏的问题"
     }
 };
 
